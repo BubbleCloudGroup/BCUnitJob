@@ -45,7 +45,6 @@ public class LogMannager
         stringBuilder.append(message);
         stringBuilder.append("\r\n");
         stringBuilder.append(e.getMessage());
-
         System.out.println(stringBuilder);
     }
     private static String getDate()
