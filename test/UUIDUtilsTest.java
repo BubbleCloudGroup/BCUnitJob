@@ -18,7 +18,7 @@ public class UUIDUtilsTest
     public Timeout globalTimeout = Timeout.millis(2000);
 
     @Test
-    public void timeLimitTest()
+    public void timeLimitTest() throws Exception
     {
         List<String> list = new ArrayList<>();
         long startTime = System.currentTimeMillis();
