@@ -14,8 +14,8 @@ import java.util.List;
  */
 public class UUIDUtilsTest
 {
-    @Rule
-    public Timeout globalTimeout = Timeout.millis(2000);
+    //@Rule
+    //public Timeout globalTimeout = Timeout.millis(2000);
 
     @Test
     public void timeLimitTest()
@@ -26,9 +26,40 @@ public class UUIDUtilsTest
         {
             String a = UUIDUtils.generateUUID().toString();
             list.add(a);
+
         }
         long endTime = System.currentTimeMillis();
 
         System.out.println("the current time span is ：" + (endTime - startTime) + "ms");
+
+        for(String item:list)
+        {
+            System.out.println(item);
+        }
     }
+
+
+    @Test
+    public void test1()
+    {
+        String a = "12345677890";
+        String b= "";
+        for(int i=0;i<10000;i++)
+        {
+            b=b+a;
+        }
+        System.out.println(b);
+    }
+    @Test
+    public void test2()
+    {
+        String a= "12345677890";
+        StringBuilder sb = new StringBuilder();
+        for(int i=0;i<10000;i++)
+        {
+            sb.append(a);
+        }
+        System.out.println(sb.toString());
+    }
+
 }

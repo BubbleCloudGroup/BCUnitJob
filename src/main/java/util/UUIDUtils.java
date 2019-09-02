@@ -69,7 +69,7 @@ public class UUIDUtils {
      *
      * @return String
      */
-    public synchronized static String generateUUID() {
+    public static synchronized  String generateUUID() {
         String uuidString;
         long fastTime = Calendar.getInstance().getTimeInMillis();
         if (hostTimeLast == fastTime) {
